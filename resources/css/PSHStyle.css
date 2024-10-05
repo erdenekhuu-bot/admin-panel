@@ -1,0 +1,2132 @@
+/*root elementuud*/
+:root{
+    --main-fonts: "Inter", sans-serif;
+    --secondary-fonts: "Inter", sans-serif;/*solih*/
+    --mainBG: #c6c6c6;
+    --mainBGMirror: #c6c6c6d9;
+    --darkerBG:#a1a1a1;
+    --fontSize: 2rem;
+    --fontC: #e5e5e5;
+    --inputColor: #f8f8f8;
+    --brightBG: #e2e2e2;
+    --fontCdark: #2d2d2d;
+    --fontCdarkBlur: #2d2d2d9a;
+    --shadowClr: #8b8b8b;
+    --btnClr: #013220; 
+    --btnClr2: #054202;
+    --btnClrBlr: #054202a7;
+    --accentClr: #f0b33e;
+    --accentClrDark: #ce9936;
+    --warningColor: #a3960f;
+    --alertColor: #a20505;
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    color: var(--fontCdark);
+}
+body{
+    width: 100%;
+    height: auto;
+    font-family: var(--main-fonts);
+    font-weight: 200;
+    background: var(--mainBG);
+}
+
+
+/*------Main buyu undsen heseg------*/
+.main{
+    width: 100%;
+    height: auto;
+}
+
+/*---mini navigation---*/
+#thinnav{
+    width: 100%;
+    height: 30px;
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--fontCdark);
+    color: var(--fontC);
+    position: sticky;
+    top: 0;
+    z-index: 14;
+}
+.Welcome{
+    width: 30vw;
+    height: 30px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    font-size: 1rem;
+    font-family: var(--main-fonts);
+    color: var(--fontC);
+    padding-left: 30px;
+}
+.rightsd{
+    width: 40vw;
+    height: 30px;
+    display: flex;
+    overflow-y: visible;
+}
+.FAQhelp{
+    width: 40rem;
+    height: 30px;
+    display: flex;
+    justify-content: right;
+    gap: 10px;
+}
+.FAQhelp a{
+    color: var(--fontC);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+.FAQhelp button:hover{
+    cursor: pointer;
+}
+.FAQhelp button{
+    font-family: var(--main-fonts);
+    color: var(--fontC);
+    font-size: 1rem;
+    font-weight: 200;
+    background: none;
+    border: none;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+.FAQhelp h2{
+    width: auto;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    font-weight: 200;
+    font-family: var(--main-fonts);
+    color: var(--fontC);
+}
+.miniicon{
+    width: 15rem;
+    display: flex;
+    flex-direction: row;
+}
+.miniicon a{
+    width: 20px;
+    height: 20px;
+}
+.miniicon a img{
+    width: 20px;
+    height: 20px;
+}
+.shpngcrt{
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 20px;
+}
+.miniSocial{
+    width: 65%;
+    display: flex;
+    justify-content: space-around;
+    padding: 0 15px;
+    align-items: center;
+}
+.anglihel{
+    width: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/*---mini navigation END---*/
+ 
+
+
+.complaint-popup-wrapper button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #d9534f;
+    color: white;
+}
+/* Pop-up Wrapper */
+.complaint-popup-wrapper {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    justify-content: center;
+    align-items: center;
+    z-index: 200;
+    backdrop-filter: blur(10px);
+}
+
+/* Pop-up Container */
+.complaint-popup {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 40rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    position: relative;
+}
+
+/* Close Button */
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Form Elements */
+.complaint-popup input[type="text"],
+.complaint-popup input[type="email"],
+.complaint-popup select,
+.complaint-popup textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.complaint-popup textarea {
+    resize: vertical;
+    height: 100px;
+}
+
+.submit-btn {
+    background-color: #d9534f;
+}
+
+.open-popup-btn {
+    background-color: #007bff;
+}
+
+
+
+
+/*---Gol menu button-d---*/
+.navi:hover{
+    background:var(--darkerBG);
+    transition: 0.3s ease-in-out;
+}
+.navi{
+    width: 100%;
+    height: auto;
+    position: fixed;
+    top: 30px;
+    background: var(--mainBGMirror);
+    backdrop-filter: blur(15px);
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: visible;
+    transition: 0.4s ease;
+    transition: top 0.3s;
+    z-index: 13;
+}
+.navi.hidden{
+    top: -100px;
+}
+.lftMenu div:hover{
+    cursor: pointer;
+}
+.rghtMenu div:hover{
+    cursor: pointer;
+}
+.lftMenu a{
+    text-decoration: none;
+}
+.lftMenu{
+    width: 30vw;
+    height: 4.5rem;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: 400;
+    gap: 1rem;
+}
+.rghtMenu a{
+    text-decoration: none;
+}
+.rghtMenu{
+    width: 30vw;
+    height: 4.5rem;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: 400;
+    gap: 1rem;
+}
+.navi img:hover{
+    cursor: pointer;
+}
+.navi img{
+    background-size: contain;
+    width: 5rem;
+    height: 5rem;
+    z-index: 20;
+}
+.mnubtn{
+    display: none;
+    z-index: 15;
+}
+.mblMenu{
+    display: none;
+    z-index: 12;
+}
+/*---gol menu button END---*/
+
+
+/*daraah heseg n main content-n code*/
+#landingP{
+    width: 100%;
+    height: auto;
+    padding-top: 4.5rem;
+    background: var(--mainBG);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+/*-------------------------nuur huudasnii gol medeelel--------------------*/
+.SanalBolgoh{
+    width: 75%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    margin: 2rem;
+}
+.medeelliinheseg{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    gap: 1rem;
+    z-index: 10;
+}
+.medeelliinheseg h1{
+    font-size: 3rem;
+}
+.medeelliinheseg h3{
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+.shuudhudaldah{
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    gap: 2rem;
+}
+.fnctbtn:hover{
+    cursor: pointer;
+}
+.fnctbtn{
+    width: 10rem;
+    height: 3rem;
+    display: flex;
+    font-size: 1.2rem;
+    font-weight: 400;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.2rem;
+    transition: 0.15s ease;
+}
+.buy:hover{
+    background: var(--btnClr);
+    box-shadow: 0 0 0 #3e3d3d99;
+}
+.buy{
+    background: var(--btnClr2);
+    color: var(--fontC);
+    box-shadow: 0 0 4px #3e3d3d99;
+}
+.cart:hover{
+    color: var(--btnClr);
+    box-shadow: 0 0 2px var(--btnClrBlr);
+}
+.cart{
+    box-shadow: 0 0 5px var(--btnClrBlr);
+}
+.zurag1{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.zurag1 img{
+    width: 30rem;
+    height: 25rem;
+}
+/*---------------------gol medeelliin heseg duusaw-----------------------*/
+
+
+/*--------------------------busad buteegdehuunuud------------------------*/
+.BusadProd{
+    width: 85%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.slide-container{
+    width: 100%;
+}
+.slide-content{
+    padding: 3rem 1.2rem;
+    margin: 0 40px;
+    overflow: hidden;
+}
+.image-content,
+.card-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 14px;
+}
+.image-content{
+    row-gap: 0.8rem;
+}
+.card{
+    width: 20rem;
+    border-radius: 0.2rem;
+    background: var(--shadowClr);
+}
+.card-image{
+    position: relative;
+    height: 10rem;
+    width: 12rem;
+}
+.card-image .card-img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.name{
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: var(--fontC);
+}
+.descrptn{
+    font-size: 1rem;
+    color: var(--fontC);
+    text-align: center;
+}
+.VMore:hover{
+    background-color: var(--shadowClr);
+    color: var(--fontC);
+    border: 1px solid var(--darkerBG);
+}
+.VMore{
+    border: none;
+    font-size: 1.3rem;
+    color: var(--fontC);
+    background-color: var(--darkerBG);
+    border-radius: 0.2rem;
+    border: 1px solid var(--darkerBG);
+    padding: 8px 16px;
+    margin: 14px;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+.swiper-navBtn:hover{
+    color: var(--fontCdark);
+}
+.swiper-navBtn{
+    width: 2rem;
+    height: 2rem;
+    color: #8b8b8b;
+    transition: 0.3s ease;
+}
+.swiper-pagination-bullet{
+    background-color: #8b8b8b;
+    opacity: 1;
+}
+.swiper-pagination-bullet-active{
+    background-color: #565656;
+}
+/*--------------------busad buteegdehuunuud ene hurtel--------------------*/
+
+
+/*-----------------------------Company Heseg START------------------------*/
+#mnContnr{
+    width: 80%;
+    display: flex;
+    font-family: var(--main-fonts);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    padding-top: 8rem;
+    row-gap: 1.5rem;
+}
+
+.firstInfo, .secondInfo{
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.frstPic, .scndPic{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.frstPic img{
+    width: 90%;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+/* .scndPic img{
+    width: 75%;
+    background-repeat: no-repeat;
+    background-size: contain;
+} */
+.frstIfno h3, .scndIfno h3{
+    display: flex;
+    font-size: clamp(1.5rem, 2.5vw, 2.5rem);
+}
+.frstIfno, .scndIfno{
+    display: flex;
+    font-size: clamp(1rem, 1.5vw, 1.3rem);
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 1rem;
+}
+.frstIfno{
+    width: 40%;
+    text-align: justify;
+}
+.scndIfno{
+    width: 90%;
+    text-align: justify;
+}
+
+#Milestone{
+    width: 90%;
+    padding-top: 3rem;
+    padding-bottom: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    gap: 1rem;
+}
+.section{
+    width: 15rem;
+    height: 6.5rem;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 1px solid var(--fontCdark);
+    border-radius: 0.2rem;
+    margin-bottom: 1.5rem;
+}
+.Numbers{
+    font-size: 1.8rem;
+    font-weight: 450;
+    color: var(--fontCdark);
+}
+.descrptnOfNumber{
+    font-size: 1.2rem;
+    color: var(--fontCdark);
+}
+
+@keyframes slide {
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(-100%);
+    }
+}
+.Hamtragchid:hover .Hamtragchid-slide{
+    animation-play-state: paused;
+}
+.Hamtragchid{
+    width: 90vw;
+    overflow: hidden;
+    padding: 1rem 0;
+    white-space: nowrap;
+    position: relative;
+    transition: 0.5s ease;
+}
+
+.Hamtragchid:before,
+.Hamtragchid:after{
+    position: absolute;
+    top: 0;
+    width: 15rem;
+    height: 100%;
+    content: "";
+    z-index: 2;
+}
+.Hamtragchid:before{
+    left: 0;
+    background: linear-gradient(to left, rgba(255,255,255,0),var(--mainBG));
+}
+.Hamtragchid:after{
+    right: 0;
+    background: linear-gradient(to right, rgba(255,255,255,0),var(--mainBG));
+}
+.Hamtragchid-slide{
+    display: inline-block;
+    animation: 35s slide infinite linear;
+}
+.Hamtragchid-slide img{
+    height: 10rem;
+    margin: 0 2rem;
+}
+
+
+.email-popup-wrapper button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 0.3rem;
+    background-color: #28a745;
+    color: white;
+}
+.email-popup-wrapper {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    justify-content: center;
+    align-items: center;
+    z-index: 200;
+}
+.email-popup {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 40rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    position: relative;
+}
+.email-popup input[type="email"],
+.email-popup input[type="text"],
+.email-popup textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+.email-popup textarea {
+    resize: vertical;
+    height: 100px;
+}
+.send-btn {
+    background-color: #007bff;
+}
+.no-scroll {
+    overflow: hidden;
+}
+#sendEmailBtn:hover{
+    cursor: pointer;
+    box-shadow: 0 0 0 #3e3d3d99;
+}
+#sendEmailBtn{
+    width: 25rem;
+    height: 2.8rem;
+    margin: 2rem 0 3rem 0;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    display: flex;
+    font-size: 1.2rem;
+    font-weight: 400;
+    background: var(--darkerBG);
+    /*border: 0.5px solid var(--shadowClr);*/
+    box-shadow: 0 0 2px #26262699;
+    border: none;
+}
+#sendEmailBtn img{
+    width: 1.5rem;
+    height: 1.5rem;
+}
+/*-----------------------------Company Heseg END--------------------------*/
+
+
+
+/*-----------------------------BuyPage Heseg START------------------------*/
+#mainContnr{
+    width: 100%;
+    padding: 6rem 0;
+    display: flex;
+    position: relative;
+}
+.prodPicSide{
+    width: 50%;
+    height: 45rem;
+    display: flex;
+    padding-top: 6rem;
+    flex-direction: column;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    position: sticky;
+    top: 6rem;
+}
+.bigImage{
+    width: 80%;
+    display: flex;
+    background-repeat: no-repeat;
+    background-size: contain;
+    justify-content: center;
+    align-items: center;
+}
+.bigImage img{
+    width: 80%;
+}
+.miniImage{
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+}
+.miniImage img:hover{
+    cursor: pointer;
+}
+.miniImage img{
+    width: 15%;
+    border: 1px solid var(--shadowClr);
+    border-radius: 0.15rem;
+    opacity: 0.7;
+}
+.advantageImage{
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 2rem;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    color: var(--fontCdark);
+    font-size: 0.9rem;
+}
+.advantageImage img{
+    width: 8rem;
+}
+.advntg{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.specSide{
+    width: 50%;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    gap: 1.5rem;
+    top: 5rem;
+}
+.heaterinfoDiv{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    gap: 1.5rem;
+}
+.heaterName, .heaterDesc, .zagwaruudlabel{
+    display: flex;
+    width: 100%;
+}
+.heaterName{
+    font-size: 2.8rem;
+    color: var(--fontCdark);
+    font-weight: 350;
+}
+.heaterDesc{
+    font-size: 1.5rem;
+    width: 100%;
+}
+.zagwaruudlabel{
+    margin-top: 1rem;
+    font-size: 1.8rem;
+    font-weight: 350;
+}
+.HeaterSelection{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+.selections h2{
+    font-size: 1.3rem;
+    font-weight: 550;
+}
+.selections p{
+    font-size: 1.5rem;
+    font-weight: 350;
+}
+.selections:hover{
+    cursor: pointer;
+    box-shadow: 0 0 2px #3e3d3d99;
+}
+.selections{
+    max-width: 40%;
+    min-width: 30%;
+    border: 1px solid var(--shadowClr);
+    border-radius: 0.2rem;
+    gap: 0.2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.tooshirheg{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+.quantity-selector {
+    width: 11rem;
+    display: flex;
+    align-items: center;
+    border: 1px solid var(--fontCdark);
+    border-radius: 0.2rem;
+    padding-left: 1rem;
+}
+.quantity-selector label {
+    margin-right: 0.2rem;
+    font-size: 1rem;
+    font-weight: 350;
+    color: var(--fontCdark);
+}
+.quantity-selector select {
+    padding: 0.6rem;
+    font-size: 1rem;
+    background-color: var(--mainBGMirror);
+    border: none;
+    border-radius: 0.2rem;
+    cursor: pointer; /* Removes the default arrow */
+}
+.quantity-selector select {
+    width: 4rem;
+    padding-right: 15px; /* Space for the arrow */
+}
+
+.quantity-selector::after {
+    font-size: 12px;
+    position: absolute;
+    right: 10px;
+    pointer-events: none;
+    color: var(--fontCdark);
+}
+
+.uldegdel{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    color: var(--alertColor);
+    font-size: 0.8rem;
+}
+.bntsForOrder{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.cartBtn:hover, .orderBtn:hover{
+    cursor: pointer;
+    box-shadow: 0 0 2px #3e3d3d99;
+}
+.cartBtn, .orderBtn{
+    width: 40%;
+    padding: 1rem 0.5rem;
+    border: 1px solid var(--shadowClr);
+    border-radius: 0.2rem;
+    background: var(--mainBG);
+    font-size: 1.5rem;
+    margin-top: 1rem;
+}
+
+
+.zahialagchiinBulan, .tulburiinMedeelel{
+    width: 90%;
+    display: none;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 1rem;
+    border: 1px dashed var(--brightBG);
+    background: var(--mainBG);
+    border-radius: 0.3rem;
+    padding: 1rem;
+}
+.zahialagchiinBulan h2,.tulburiinMedeelel h2, .zahialagchiinBulan1 h2,.tulburiinMedeelel1 h2{
+    font-weight: 400;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+.zahialagchiinBulan label, .zahialagchiinBulan1 label{
+    font-size: 1.3rem;
+    font-weight: 300;
+    color: var(--fontCdark);
+}
+.zahialagchiinBulan input::placeholder,.zahialagchiinBulan1 input::placeholder {
+    color: var(--fontCdarkBlur);
+    font-size: 1rem;
+}
+.zahialagchiinBulan input, .zahialagchiinBulan1 input{
+    font-size: 1.2rem;
+    padding: 0.2rem 0.5rem;
+    margin: 0.5rem 0rem;
+    border: none;
+    background: var(--inputColor);
+}
+.zahialagchiinBulan button:hover, .zahialagchiinBulan1 button:hover{
+    cursor: pointer;
+    background: var(--brightBG);
+    border: 1px solid var(--darkerBG);
+}
+.zahialagchiinBulan button, .zahialagchiinBulan1 button{
+    width: 16rem;
+    font-size: 1.2rem;
+    padding: 0.3rem 0.6rem;
+    border-radius: 0.2rem;
+    margin-top: 1rem;
+    color: var(--fontCdark);
+    background: var(--darkerBG);
+    border: 1px solid var(--darkerBG);
+    transition: 0.3s ease;
+}
+#ZahialagchDID{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    background: var(--brightBG);
+    padding: 1rem 0.5rem;
+    border-radius: 0.2rem;
+}
+.PaymentDetails{
+    border: 1px solid var(--darkerBG);
+}
+/*-----------------------------BuyPage Heseg END-------------------------*/
+
+
+/*-----------------------------Ecological Heseg START---------------------*/
+.grid{
+    display: grid;
+    padding: 6rem 6rem 2rem 6rem;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    font-size: 1.5rem;
+    height: 1080px;
+    gap: 0.3rem;
+}
+.grid div:hover{
+    box-shadow: none;
+}
+.grid-2 div:nth-child(1):hover{
+    box-shadow: none;
+}
+.grid-2 div:nth-child(2):hover{
+    box-shadow: none;
+}
+.grid-2 div:nth-child(3):hover{
+    box-shadow: none;
+}
+.grid-3 div:nth-child(1):hover{
+    box-shadow: none;
+}
+.grid-3 div:nth-child(2):hover{
+    box-shadow: none;
+}
+.grid-3 div:nth-child(3):hover{
+    box-shadow: none;
+}
+.grid-1{
+    border-radius: 0.3rem;
+    border: 1px solid var(--darkerBG);
+    box-shadow: 0 0 3px #26262699;
+}
+.grid-2{
+    display: grid;
+    grid-template-rows: 1fr 1fr ;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.2rem;
+}
+.grid-2 div:nth-child(1){
+    border: 1px solid var(--darkerBG);
+    box-shadow: 0 0 3px #26262699;
+    grid-column: 1/1;
+    border-radius: 0.3rem;
+}
+.grid-2 div:nth-child(2){
+    border: 1px solid var(--darkerBG);
+    box-shadow: 0 0 3px #26262699;
+    grid-column: 2/2;
+    border-radius: 0.3rem;
+}
+.grid-2 div:nth-child(3){
+    border: 1px solid var(--darkerBG);
+    box-shadow: 0 0 3px #26262699;
+    grid-column: 1/3;
+    border-radius: 0.3rem;
+}
+.grid-3 {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    gap: 0.2rem;
+}
+.grid-3 div:nth-child(1){
+    border: 1px solid var(--darkerBG);
+    box-shadow: 0 0 3px #26262699;
+    grid-row: 1 / 3;
+    border-radius: 0.3rem;
+}
+.grid-3 div:nth-child(2){
+    border: 1px solid var(--darkerBG);
+    box-shadow: 0 0 3px #26262699;
+    grid-row: 1 / 2;
+    border-radius: 0.3rem;
+}
+.grid-3 div:nth-child(3){
+    border: 1px solid var(--darkerBG);
+    box-shadow: 0 0 3px #26262699;
+    grid-row: 2 / 3;
+    border-radius: 0.3rem;
+}
+.grid-4{
+    border: 1px solid var(--darkerBG);
+    box-shadow: 0 0 3px #26262699;
+    border-radius: 0.3rem;
+}
+/*-----------------------------Ecological Heseg END-----------------------*/
+
+
+/*----------------login popup try START----------------*/
+.containerLogin{
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    justify-content: center;
+    align-items: center;
+}
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); /* Black background with opacity */
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: #fff;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 300px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+}
+
+/* The Close Button */
+.close {
+    color: var(--darkerBG);
+    float: right;
+    font-size: 1.5rem;
+    border-radius: 50%;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: var(--fontCdark);
+}
+
+#openLoginModalBtn, #openSignupModalBtn {
+    width: 20rem;
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#openLoginModalBtn:hover, #openSignupModalBtn:hover {
+    background-color: #45a049;
+}
+.signupForm button, .loginForm button{
+    width: 50%;
+}
+
+input[type="text"], input[type="password"], input[type="email"] {
+    width: 100%;
+    padding: 8px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+form div {
+    margin-bottom: 10px;
+}
+
+/*----------------login popup try END-----------------*/
+
+
+
+
+
+/*-----------------------------Calculate Heseg START----------------------*/
+/* .tootsoolohW{
+    width: 100%;
+    padding-top: 6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.hariu{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+.songolt, .warningmsg, .MonthlySSS, .SumSSS{
+    width: 80%;
+}
+.songolt{
+    width: 80%;
+    display: flex;
+}
+.songolt1{
+    width: 50%;
+}
+.songolt2{
+    width: 50%;
+}
+.warningmsg{
+    border: 1px solid var(--warningColor);
+    border-radius: 0.2rem;
+    padding: 0.5rem 1.2rem;
+    font-size: 0.85rem;
+    color: var(--warningColor);
+    text-align: center;
+}
+.MonthlySSS h1{
+    text-align: end;
+}
+.SumSSS h1{
+    text-align: end;
+}
+.VertLine{
+    width: 1.5px;
+    height: 25rem;
+    border: 1.5px solid var(--fontCdark);
+    margin: 2rem 2rem;
+}
+.baishinInfo{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    gap: 1.5rem;
+}
+.baishinInfo h1{
+    text-align: center;
+}
+.CalcSon{
+    width: 100%;
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.CalcSon button:hover{
+    box-shadow: 0 0 2px #3e3d3d99;
+    cursor: pointer;
+}
+.CalcSon button{
+    padding: 0.5rem 1rem;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 0.2rem;
+}
+.numinfo{
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    gap: 1rem;
+}
+.tailbarUg, .ToonUtga{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    font-size: 1.5rem;
+}
+.tailbarUg{
+    justify-content: center;
+    align-items: end;
+    font-weight: 400;
+}
+.ToonUtga input{
+    width: 70%;
+    border: none;
+    padding: 0.3rem 0;
+    border-radius: 0.2rem;
+    font-size: 1.5rem;
+    text-align: center;
+}
+.tootsool:hover{
+    cursor: pointer;
+    background: var(--mainBG);
+    color: var(--btnClrBlr);
+    border: 1px solid var(--btnClrBlr);
+}
+.tootsool{
+    padding: 0.5rem 2rem;
+    font-size: 1.3rem;
+    border-radius: 0.15rem;
+    border: 1px solid var(--btnClrBlr);
+    background: var(--btnClrBlr);
+    color: var(--fontC);
+    transition: 0.2s ease;
+} */
+
+#heater-card-container{
+    display: flex;
+    width: 90%;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+.swiper-slide{
+    gap: 1rem;
+}
+.card-content{
+    gap: 0.6rem;
+}
+.namee{
+    display: flex;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: var(--fontC);
+    justify-content: center;
+    align-items: center;
+}
+.descrptnn{
+    display: flex;
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: var(--fontC);
+    justify-content: center;
+    align-items: center;
+}
+.room-bill{
+    display: flex;
+    font-size: 1.1rem;
+    text-align: center;
+    font-weight: 400;
+    color: var(--btnClrBlr);
+    justify-content: center;
+    align-items: center;
+}
+#total-bill-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--btnClrBlr);
+}
+.total-bill{
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: var(--btnClrBlr);
+}
+.HouseInfo{
+    width: 100%;
+    margin-top: 6rem;
+}
+.HouseInfo, .ques{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.3rem;
+    gap: 1rem;
+    padding: 1rem;
+}
+.ques{
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    width: 25rem;
+    text-align: center;
+    border: 1px solid var(--darkerBG);
+    background-color: var(--darkerBG);
+    font-size: 1.5rem;
+    font-weight: 350;
+}
+.ques input{
+    width: 80%;
+    padding: 0.2rem;
+    font-size: 1.3rem;
+    text-align: center;
+}
+.HouseInfo button:hover{
+    box-shadow: 0 0 3px #26262699;
+    cursor: pointer;
+}
+.HouseInfo button{
+    width: 25rem;
+    padding: 0.8rem 4rem;
+    font-size: 1.4rem;
+    background: var(--btnClrBlr);
+    border: none;
+    border-radius: 0.2rem;
+    color: var(--fontC);
+}
+/*-----------------------------Calculate Heseg END------------------------*/
+
+
+/*-----------------------------Advice Heseg START-------------------------*/
+#AdvPage{
+    display: flex;
+    padding-top: 4.3rem;
+    flex-direction: row;
+    flex-wrap: wrap;
+    overflow-y: auto;
+    overflow-x: auto;
+    grid-row: 1 / 2;
+    grid-column: 1 / 3;
+    justify-content: center;
+    align-items: center;
+    /*background-color: #e5e5e5;*/    
+    background-size: 300% 300%;
+    animation: color 10s ease-in-out infinite forwards;
+    color: #fdfcfd;
+    font-family: var(--main-fonts);
+}
+::-webkit-scrollbar {width: 10px;}
+::-webkit-scrollbar-corner {display: none;}
+::-webkit-scrollbar:hover {width: 13px;}
+::-webkit-scrollbar-thumb {background: #464646; border-radius: 0.15rem;}
+::-webkit-scrollbar-thumb:hover {background: #373636; width: 15px;}
+.cardd:hover{
+    box-shadow: 4px 6px 8px #1210175e;
+    transform:translateY(3px);
+    transition: 0.3s ease;
+    opacity: 1;
+}
+.cardd{
+    display: flex;
+    align-items: center;
+    width: 80vw;
+    max-width: 1050px;
+    min-width: 480px;
+    min-height: 400px;
+    padding: 80px 30px 60px 20px;
+    margin: 30px 20px;
+    background: var(--darkerBG);
+    border-radius: 0.3rem;
+    box-shadow: 8px 8px 8px #1210175e;
+    opacity: 0.95;
+    animation: fade-in linear;
+    animation-timeline: view();
+    animation-range-start: cover;
+    animation-range-end: 500px;
+}
+.cardd img{
+    max-width: 280px;
+    width: 35vw;
+    height: 380px;
+    object-fit: cover;
+    margin-left: -60px;
+    margin-right: 80px;
+    border-radius: 10px;
+    box-shadow: 0 60px 40px rgb(0 0 0/8%);
+}
+.cardd h2{
+    font-size: 2.3rem;
+    font-weight: 400;
+    letter-spacing: 1px;
+    margin-top: 0;
+    margin-right: 30px;
+    margin-bottom: 20px;
+    font-family:var(--mainfont-fonts);
+}
+.cardd h3{
+    font-family: var(--mainfont-fonts);
+    font-size: 1.3rem;
+    font-weight: 400;
+    letter-spacing: 1.2px;
+    margin: 10px 0;
+    opacity: 0.75;
+}
+.cardd p{
+    display: flex;
+    font-family: var(--mainfont-fonts);
+    font-size: 1.3rem;
+    font-weight: 400;
+    letter-spacing: 1.2px;
+    height: 50px;
+    overflow: hidden;
+    margin-bottom: 50px;
+    opacity: 0.7;
+}
+.cardd button:hover{
+    background: #0e602c;
+    /*box-shadow: inset 500px 0 0 0 #0e602c;*/
+    transition: ease 0.4s;
+    animation: fade-in linear;
+    color: var(--fontC);
+    cursor: pointer;
+}
+.cardd button {
+    width: 60%;
+    display: grid;
+    place-items: center;
+    border: 0;
+    overflow: hidden;
+    background: var(--btnClr);
+    color: #e9e3d5;
+    padding: 16px 26px;
+    font-size: 1.5rem;
+    border-radius: 0.3rem;
+    text-decoration: none;
+}
+
+/*-----------------------------Advice Heseg END---------------------------*/
+/*main content ene hurtel*/
+
+
+/*-----------------------------Shopping cart Heseg START---------------------------*/
+#cartMainCont{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 6rem;
+}
+.selectedHtrs{
+    width: 60%;
+    height: 50rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    gap: 1rem;
+    padding-top: 2rem;
+    margin: 1rem 0;
+    overflow: scroll;
+}
+.selectionByOrder{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+    background: var(--brightBG);
+    border-radius: 0.3rem;
+}
+.price-quantity {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--main-fonts);
+}
+.price {
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+.quantity-selector1 {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #f9f3eb;
+    border-radius: 10px;
+    border: none;
+    padding: 5px;
+    margin: 1rem;
+}
+.qty-btn {
+    background-color: #f09c00;
+    border: none;
+    color: white;
+    font-size: 1.2rem;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 50%;
+    margin: 0 5px;
+}
+.quantity {
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 0 1rem;
+}
+.selectionByOrder img{
+    width: 15rem;
+    background-size: contain;
+}
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: transparent;
+    border: none;
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: #555;
+}
+
+.PaymentDetailsDiv{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+}
+.zahialagchiinBulan1, .tulburiinMedeelel1{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 1rem;
+    border: 1px dashed var(--darkerBG);
+    border-radius: 0.3rem;
+    padding: 1rem;
+}
+/*-----------------------------Shopping cart Heseg END---------------------------*/
+
+
+
+
+/*-----------------------------FAQ Heseg START---------------------------*/
+.faq-container {
+    max-width: 80%;
+    background-color: var(--fontC);
+    margin: 7rem auto 2rem auto;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+.faq-container h1 {
+    text-align: center;
+    margin-bottom: 1.8rem;
+    font-size: 2rem;
+    color: var(--fontCdark);
+}
+.faq-item {
+    border-bottom: 1px solid var(--fontC);
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+}
+.faq-question {
+    width: 100%;
+    background-color: var(--inputColor);
+    border: none;
+    outline: none;
+    font-family: var(--main-fonts);
+    padding: 15px;
+    text-align: left;
+    font-size: 1.3rem;
+    font-weight: 450;
+    color: var(--fontCdark);
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    position: relative;
+}
+.faq-question::after {
+    content: '\25BC'; /* Unicode for downward arrow */
+    font-size: 1rem;
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    color: var(--fontCdark);
+    transform: translateY(-50%);
+    transition: transform 0.3s ease;
+}
+.faq-question.active::after {
+    transform: translateY(-50%) rotate(180deg); /* Rotate arrow */
+}
+.faq-question:hover {
+    background-color: var(--brightBG);
+}
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    padding-left: 15px;
+}
+.faq-answer p {
+    margin: 10px 0;
+    font-size: 1.2rem;
+    font-weight: 350;
+    color: var(--fontCdark);
+}
+/*-----------------------------FAQ Heseg END---------------------------*/
+
+
+/*footer section footer n @media heseg deer edit hiigdehgui */
+footer{
+    width: 100%;
+    height: auto;
+    background-color: var(--darkerBG);
+    display: flex;
+    flex-direction: column;
+    bottom: 0;
+}
+footer a{
+    text-decoration: none;
+    font-family: var(--main-fonts);
+    color: var(--fontCdark);
+}
+
+.SocialCont{
+    width: 100vw;
+    display: flex;
+    height: auto;
+    padding-top: 3rem;
+    padding-bottom: 1rem;
+    padding-left: 20vw;
+    padding-right: 20vw;
+    justify-content: space-around;
+    align-items: center;
+    align-self: center;
+}
+.Emailicon:hover{
+    opacity: 100%;
+    cursor: pointer;
+    transform: scale(1.1);
+    transition: transform 0.2s ease-in-out;
+}
+.Emailicon{
+    flex-direction: row;
+    width: 2rem;
+    height: 2.2rem;
+    margin-left: 11px;
+    opacity: 90%;
+}
+.Facebookicon:hover{
+    border-radius: 3px;
+    opacity: 100%;
+    cursor: pointer;
+    transform: scale(1.1);
+    transition: transform 0.2s ease-in-out;
+}
+.Facebookicon{
+    flex-direction: row;
+    width: 2rem;
+    height: 2rem;
+    margin-left: 11px;
+    opacity: 90%;
+}
+.Instagramicon:hover{
+    border-radius: 3px;
+    opacity: 100%;
+    cursor: pointer;
+    transform: scale(1.1);
+    transition: transform 0.2s ease-in-out;
+}
+.Instagramicon{
+    flex-direction: row;
+    width: 2rem;
+    height: 2rem;
+    margin-left: 11px;
+    opacity: 70%;
+}
+
+.hayg{
+    width: 100%;
+    height: auto;
+    display: flex;
+    padding: 1rem 15vw;
+    justify-content: space-around;
+    font-family: var(--main-fonts);
+    font-size: 1.5rem;
+    font-weight: 350;
+    flex-wrap: wrap;
+    text-align: center;
+}
+.utas{
+    display: flex;
+    justify-content: space-around;
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: var(--fontCdark);
+    padding: 2rem 0;
+}
+.MapsG{
+    font-size: 1rem;
+    height: auto;
+}
+.MapsG iframe{
+    display: flex;
+    margin:1.5rem 10vw;
+}
+.line{
+    width: 80vw;
+    height: 0.1rem;
+    margin-right: 10vw;
+    margin-left: 10vw;
+    margin-top: 1rem;
+    border: 0.1rem var(--fontCdark) solid;
+    border-radius: 0.05rem;
+}
+.endcrdt{
+    width: 100%;
+    color: var(--fontCdark);
+    font-weight: 400;
+    font-family: var(--main-fonts);
+    text-align: center;
+    margin: 1.2rem 0;
+}
+
+/*-------------------------------------------------------------*/
+
+
+/*for small screen*/
+@media (max-width: 1050px){
+    #mainContnr{
+        padding-top: 0;
+    }
+    .prodPicSide{
+        width: 40%;
+        padding-top: 0;
+        position: sticky;
+    }
+    .bigImage img{
+        width: 100%;
+    }
+    .miniImage img{
+        width: 25%;
+    }
+    .specSide{
+        width: 60%;
+    }
+    .specSide{
+        justify-content: center;
+        align-items: center;
+    }
+    .advantageImage{
+        width: 100%;
+    }
+    .advntg{
+        width: 25%;
+    }
+    .advntg img{
+        width: 100%;
+    }
+    .heaterName{
+        padding-top: 2rem;
+    }
+    .cartBtn, .orderBtn{
+        width: 18rem;
+    }
+
+
+    .selectionByOrder{
+        width: 85%;
+    }
+
+
+    /* company*/
+    .firstInfo{
+        flex-direction: column;
+    }
+    .secondInfo{
+        flex-direction: column-reverse;
+    }
+    .frstPic, .scndPic{
+        width: 100%;
+    }
+    .frstPic img,.scndPic img{
+        width: 100%;
+    }
+    .frstIfno h3, .scndIfno h3{
+        display: flex;
+        font-size: clamp(2rem, 2.5vw, 2.5rem);
+    }
+    .frstIfno, .scndIfno{
+        width: 100%;
+        font-size: clamp(1rem, 1.5vw, 1.3rem);
+    }
+    #HamtrahHuselt:hover{
+        cursor: pointer;
+        box-shadow: 0 0 0 #3e3d3d99;
+    }
+    #HamtrahHuselt{
+        width: 22.5rem;
+        height: 2.8rem;
+        margin: 2rem 0 3rem 0;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        display: flex;
+        font-size: 1.2rem;
+        font-weight: 400;
+        background: var(--darkerBG);
+        /*border: 0.5px solid var(--shadowClr);*/
+        box-shadow: 0 0 2px #3e3d3d99;
+    }
+    #HamtrahHuselt img{
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+    /* company end*/
+}
+/*for small screen*/
+
+
+/*For tablet 834px*/
+@media (max-width: 850px){
+    .Welcome{
+        width: 40%;
+    }
+    .rightsd{
+        width: 60%;
+        padding-left: 0;
+    }
+    .SanalBolgoh{
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+    .zurag1 img{
+        width: 25rem;
+        height: 20rem;
+    }
+    .navi:hover{
+        background: var(--mainBGMirror);
+    }
+    .navi{
+        justify-content: space-between;
+    }
+    .lftMenu{
+        display: none;
+    }
+    .rghtMenu{
+        display: none;
+    }
+    .mnubtn{
+        margin: 1rem;
+        position: relative;
+        width: 3rem;
+        height: 3rem;
+        background: var(--mainBG);
+        box-shadow: 0 0 8px #3e3d3d99;
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        overflow: hidden;
+    }
+    .mnubtn span{
+        position: absolute;
+        width: 2.2rem;
+        height: 0.2rem;
+        background: var(--fontCdark);
+        border-radius: 0.2rem;
+        transition: 0.3s;
+    }
+    .mnubtn span:nth-child(1){
+        transform: translateY(-13px);
+    }
+    .mnubtn.active span:nth-child(1){
+        transform: translateY(0px) rotate(45deg);
+    }
+    .mnubtn span:nth-child(2){
+        transform: translateY(13px);
+    }
+    .mnubtn.active span:nth-child(2){
+        transform: translateY(0px) rotate(-45deg);
+    }
+    .mnubtn.active span:nth-child(3){
+        opacity: 0;
+    }
+    .mnubtn.active{
+        box-shadow: none;
+    }
+    .mblMenu div:hover{
+        cursor: pointer;
+    }
+    .mblMenu a{
+        text-decoration: none;
+    }
+    .mblMenu{
+        display: flex;
+        width: 100%;
+        position: fixed;
+        top: 6rem;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: var(--mainBGMirror);
+        font-size: 1.5rem;
+        font-weight: 400;
+        gap: 2.5rem;
+        padding: 2rem;
+        opacity: 0;
+        backdrop-filter: blur(15px);
+        padding-bottom: 4rem;            
+        transform: translate(0,-100%); /* Position off-screen */
+        transition: transform 0.5s ease, opacity 0.5s ease, top 0.8s;
+    }
+    .mblMenu.hidden{
+        top: -500px;
+    }
+    .mblMenu.show { /* Ensure the element is displayed */
+        backdrop-filter: blur(15px);
+        opacity: 1;
+        transform: translate(0); /* Move into view */
+    }
+    
+
+    .SanalBolgoh{
+        width: 85%;
+        margin-left: 5rem;
+        margin-right: 5rem;
+    }
+    .medeelliinheseg h1{
+        font-size: 2.5rem;
+    }
+    .medeelliinheseg h2{
+        font-size: 1.2rem;
+    }
+    .medeelliinheseg h3{
+        font-size: 1rem;
+        font-weight: 500;
+    }
+    .medeelliinheseg{
+        width: 100%;
+    }
+
+
+    #mainContnr{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 6rem;
+        height: auto;
+    }
+    .prodPicSide{
+        width: 95%;
+        height: auto;
+        position: relative;
+        padding-top: 0;
+        padding-bottom: 2rem;
+    }
+    .bigImage img{
+        width: 80%;
+    }
+    .specSide{
+        width: 95%;
+    }
+    .specSide{
+        justify-content: center;
+        align-items: center;
+    }
+    .miniImage img{
+        width: 15%;
+    }
+    .heaterinfoDiv{
+        width: 85%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1.5rem;
+    }
+    .heaterName{
+        display: flex;
+        justify-content: center;
+    }
+    .zagwaruudlabel{
+        flex-direction: column;
+        align-items: center;
+    }
+    .HeaterSelection{
+        flex-direction: column;
+        align-items: center;
+    }
+    .tooshirheg{
+        text-align: center;
+        align-items: center;
+    }
+    .bntsForOrder{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #cartMainCont{
+        flex-direction: column;
+    }
+    .selectedHtrs, .PaymentDetailsDiv{
+        width: 100%;
+        align-items: center;
+    }
+    .selectedHtrs{
+        height: auto;
+        justify-content: start;
+    }
+    .selectionByOrder img{
+        width: 10rem;
+    }
+
+
+    /*ecological heseg*/
+    .grid{
+        padding: 6rem 2rem 2rem 2rem;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr;
+        gap: 0;
+        box-shadow: none;
+    }
+    .grid-1{
+        box-shadow: none;
+        border-radius: 0;
+    }
+    .grid-2{
+        box-shadow: none;
+        border-radius: 0;
+        gap: 0;
+    }
+    .grid-2 div:nth-child(1){
+        box-shadow: none;
+        border-radius: 0;
+    }
+    .grid-2 div:nth-child(2){
+        box-shadow: none;
+        border-radius: 0;
+    }
+    .grid-2 div:nth-child(3){
+        box-shadow: none;
+        border-radius: 0;
+    }
+    .grid-3 {
+        box-shadow: none;
+        border-radius: 0;
+        gap: 0;
+    }
+    .grid-3 div:nth-child(1){
+        box-shadow: none;
+        border-radius: 0;
+    }
+    .grid-3 div:nth-child(2){
+        box-shadow: none;
+        border-radius: 0;
+    }
+    .grid-3 div:nth-child(3){
+        box-shadow: none;
+        border-radius: 0;
+    }
+    .grid-4{
+        box-shadow: none;
+        border-radius: 0;
+        gap: 0;
+    }
+}
+
+@media (max-width: 610px){
+    #thinnav{
+        display: none;
+    }
+    .navi{
+        top: 0;
+    }
+    .mblMenu{
+        top: 6rem;
+    }
+    /*.swiper-navBtn{
+        display: none;
+    }*/
+    .heaterName{
+        font-size: 2rem;
+        text-align: center;
+    }
+    .grid{
+        padding: 6rem 0 2rem 0;
+    }
+    .grid-2{
+        grid-template-columns: 1fr 1fr;
+    }
+    .grid-2 div:nth-child(1){
+        grid-column: 1/1;
+        grid-row: 1/3;
+    }
+    .grid-2 div:nth-child(2){
+        grid-column: 2/2;
+    }
+    .grid-2 div:nth-child(3){
+        grid-column: 2/3;
+    }
+    .grid-3{
+        grid-template-columns: 1fr 1fr;
+    }
+    .grid-3 div:nth-child(1){
+        grid-row: 1/1;
+    }
+    .grid-3 div:nth-child(2){
+        grid-row: 1/2;
+    }
+    .grid-3 div:nth-child(3){
+        grid-row: 1/3;
+    }
+}
+/*For mobile 480px*/
+@media (max-width: 480px){
+}
